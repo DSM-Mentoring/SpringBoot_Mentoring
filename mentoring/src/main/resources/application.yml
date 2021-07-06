@@ -10,3 +10,12 @@ spring:
       ddl-auto: update
     show-sql: true
     generate-ddl: true
+
+auth:
+  jwt:
+    secret: gkgpfud
+    header: Authorization
+    prefix: Bearer
+    exp:
+      access: 1800
+      refresh: 640800
