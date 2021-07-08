@@ -1,6 +1,8 @@
 package com.example.mentoring.controller;
 
 import com.example.mentoring.dto.request.JoinRequest;
+import com.example.mentoring.dto.request.LoginRequest;
+import com.example.mentoring.dto.response.TokenResponse;
 import com.example.mentoring.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,5 +20,10 @@ public class UserController {
     @PostMapping("/join")
     public void join(@RequestBody JoinRequest joinRequest) {
         userService.join(joinRequest);
+    }
+
+    @PostMapping("/login")
+    public TokenResponse login(@RequestBody LoginRequest loginRequest) {
+        return userService.login(loginRequest);
     }
 }
