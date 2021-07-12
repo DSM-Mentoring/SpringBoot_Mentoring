@@ -17,5 +17,5 @@ auth:
     header: Authorization
     prefix: Bearer
     exp:
-      access: 1800
+      access: 18000
       refresh: 640800
